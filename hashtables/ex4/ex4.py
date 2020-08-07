@@ -1,8 +1,11 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    totals = {}
+    result = []
+    for integer in a:
+        if abs(integer) not in totals.keys():
+            totals[abs(integer)] = 1
+        else:
+            result.append(abs(integer))
 
     return result
 
