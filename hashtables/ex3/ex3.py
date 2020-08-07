@@ -1,9 +1,15 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    goal = len(arrays)
+    digits = {}
+    result = []
+    for array in arrays:
+        for digit in array:
+            if digit not in digits:
+                digits[digit] = 1
+            else:
+                digits[digit] += 1
+                if digits[digit] == goal:
+                    result.append(digit)
     return result
 
 
